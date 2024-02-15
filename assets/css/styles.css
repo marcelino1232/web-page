@@ -1,0 +1,264 @@
+:root{
+    --topografia: "Raleway", sans-serif;
+    --navy:#023047;
+    --primary:#3a86ff;
+    --secondary:#2a9d8f;
+    --danger:#e76f51;
+    --info:#a2d2ff;
+    --white:white;
+    --black:black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--topografia);
+}
+
+
+
+.container{
+    width: 80%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em ;
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+.btn-danger{
+    background-color: var(--danger);
+    color: var(--white);
+}
+.btn-info{
+    background-color: var(--info);
+    color: var(--white);
+}
+
+.btn-dark{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.btn:hover{
+    color: var(--white);
+}
+
+.bg-header{
+    background-image: url('../img/bg-header-min.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18.75em;
+}
+
+
+.bg-navbar{
+    background-color: rgba(0, 0, 0, 0.50);
+    padding: 1.5em 0;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.navbar-brand img {
+    width: 2em;
+}
+
+.navbar-nav{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.nav-link{
+    display: inline-block;
+    padding: 0.3em;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+}
+
+.main{
+    background-color: white;
+    padding: 0.3em;
+    margin-top: -2rem;
+    border-radius:0.3em ;
+
+}
+
+.main-title{
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.card{
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 0, 0, 0.831);
+    color: var(--white);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card-body{
+    padding: 1em;
+}
+
+.card-body h5{
+    font-size: 1.5rem;
+    margin: 1em 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    
+}
+
+
+.card-body p{
+    font-weight:400;
+    text-align: justify;
+    margin-bottom: 0.8rem;
+}
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--navy);
+
+}
+
+.nosotros-col-img{
+    background-image: url('../img/nosotros-min.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 22.875rem;
+    width: 100%;
+    order: 2;
+}
+
+.nosotros-col-text{
+    order:1;
+    padding: 1em;
+    text-align: center;
+    color: white;
+}
+.nosotros-body h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.nosotros-body p{
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 1em 0;
+}
+
+
+.bg-footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--navy);
+    text-align: center;
+    text-transform: uppercase;
+    color:white
+}
+
+
+@media (min-width:768px) {
+
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .navbar-brand{
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    .navbar-brand img{
+        margin-right: 10px;
+    }
+
+    .tienda {
+        flex-direction: row;
+    }
+
+    .nosotros{
+        flex-direction: row;
+    }
+
+
+    .nosotros-col-img{
+        order: 1;
+        flex-basis: 50%;
+        height: 32.25rem;
+    }
+    
+    .nosotros-col-text{
+        order:2;
+        flex-basis: 50%;
+     
+    }
+
+    .tienda{
+        display: flex;
+        gap:1em;
+    }
+}
